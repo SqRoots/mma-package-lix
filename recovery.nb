@@ -1,0 +1,111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3933,        103]
+NotebookOptionsPosition[      3615,         88]
+NotebookOutlinePosition[      3973,        104]
+CellTagsIndexPosition[      3930,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"initPath", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"$UserBaseDirectory", ",", "\"\<Kernel\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"initFile", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"initPath", ",", "\"\<init.m\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"initBackupFiles", "=", 
+    RowBox[{"FileNames", "[", 
+     RowBox[{"\"\<init-backup-*.m\>\"", ",", "initPath"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"\:5982\:679c\:5b58\:5728\:5907\:4efd", "\:ff0c", 
+    RowBox[{
+    "\:5219\:4f7f\:7528\:5907\:4efd\:6587\:4ef6\:8986\:76d6\:5f53\:524d", 
+     RowBox[{"\[OpenCurlyDoubleQuote]", 
+      RowBox[{"init", ".", "m"}], "\[CloseCurlyDoubleQuote]"}], 
+     "\:6587\:4ef6"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Length", "[", "initBackupFiles", "]"}], ">", "0"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"initBackupFile", "=", 
+     RowBox[{"Last", "[", 
+      RowBox[{"SortBy", "[", 
+       RowBox[{"initBackupFiles", ",", 
+        RowBox[{
+         RowBox[{"ToExpression", "[", 
+          RowBox[{"StringReplace", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{
+             RowBox[{"RegularExpression", "[", "\"\<\\\\D\>\"", "]"}], 
+             "\[Rule]", "\"\<\>\""}]}], "]"}], "]"}], "&"}]}], "]"}], "]"}]}],
+     ";", "\[IndentingNewLine]", 
+    RowBox[{"DeleteFile", "[", "initFile", "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"RenameFile", "[", 
+     RowBox[{"initBackupFile", ",", "initFile"}], "]"}], ";"}]}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.705291707007222*^9, 3.7052917218111115`*^9}, {
+   3.705291752873533*^9, 3.7052917810879045`*^9}, {3.705291853322981*^9, 
+   3.7052918879324875`*^9}, {3.7052919437863092`*^9, 
+   3.7052919470900507`*^9}, {3.7052920707105885`*^9, 
+   3.7052920821479607`*^9}, {3.7052921177147183`*^9, 
+   3.7052921220899096`*^9}, {3.7052921734416275`*^9, 3.70529219919588*^9}, {
+   3.705292252204164*^9, 3.705292278515083*^9}, {3.705292317082222*^9, 
+   3.7052923620439253`*^9}, {3.705292392420596*^9, 3.7052925089551516`*^9}, {
+   3.705292553434185*^9, 3.7052925607978044`*^9}, {3.7052926025470686`*^9, 
+   3.705292606017758*^9}, {3.705309908829167*^9, 3.7053099760234256`*^9}, {
+   3.7053100071153555`*^9, 3.7053100633178916`*^9}, {3.7053101046594687`*^9, 
+   3.7053101624857063`*^9}, {3.7053102015358067`*^9, 3.7053102054544783`*^9}, 
+   3.7053102505544357`*^9, 3.7053104353907475`*^9, {3.7053107813525443`*^9, 
+   3.705310822171151*^9}, {3.705815673188029*^9, 3.7058156745160007`*^9}, {
+   3.707102915039976*^9, 3.7071029190764165`*^9}, {3.707103162539707*^9, 
+   3.7071032835474477`*^9}, {3.7071033177876444`*^9, 3.707103502212211*^9}, {
+   3.707103592349674*^9, 
+   3.70710368185946*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
+16f19f3b038a"]
+},
+WindowSize->{775, 805},
+WindowMargins->{{Automatic, -61}, {Automatic, 235}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e745\:670816\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3053, 66, 242, "Input", "ExpressionUUID" -> \
+"192e6d11-18d3-412e-8880-16f19f3b038a"]
+}
+]
+*)
+

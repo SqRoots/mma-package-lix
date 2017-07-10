@@ -1,0 +1,16 @@
+<|
+"oracle" -> <|
+	"userName" -> "",
+	"password" -> "",
+	"host" -> "",
+	"port" -> "1521",
+	"sid" -> ""
+	|>,
+"mysql" -> <|
+	"userName" -> "",
+	"password" -> "",
+	"host" -> "",
+	"port" -> "3306",
+	"db" -> ""
+	|>
+|>

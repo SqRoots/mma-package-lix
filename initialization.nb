@@ -1,0 +1,151 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5376,        143]
+NotebookOptionsPosition[      5058,        128]
+NotebookOutlinePosition[      5415,        144]
+CellTagsIndexPosition[      5372,        141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"path", "=", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Quiet", "[", 
+   RowBox[{"DeleteDirectory", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
+     RowBox[{"DeleteContents", "\[Rule]", "True"}]}], "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CopyDirectory", "[", 
+    RowBox[{
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"path", ",", "\"\<package-lix-src\>\""}], "}"}], "]"}], ",", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}]}], 
+    "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\:901a\:8fc7\:5305\:4e2d\:7684", " ", 
+     RowBox[{"init", ".", "nb"}], " ", "\:7a0b\:5e8f"}], "\:ff0c", 
+    "\:5904\:7406\:9700\:8981\:521d\:59cb\:5316\:7684\:5305"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"initnbFiles", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"\"\<init.nb\>\"", ",", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
+     "Infinity"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NotebookEvaluate", "/@", "initnbFiles"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"\:8986\:76d6\:539finit", ".", "m\:6587\:4ef6"}], 
+    RowBox[{"\:ff08", 
+     RowBox[{"\:5148\:5907\:4efd\:4e3a", "\:ff1a", 
+      RowBox[{"init", "-", "backup", "-", 
+       RowBox[{"n", ".", "m"}]}]}], "\:ff09"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", 
+   RowBox[{
+    RowBox[{"Length", "[", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<init-backup-*.m\>\"", ",", 
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{"$UserBaseDirectory", ",", "\"\<Kernel\>\""}], "}"}], 
+        "]"}]}], "]"}], "]"}], "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"RenameFile", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$UserBaseDirectory", ",", "\"\<Kernel\>\"", ",", "\"\<init.m\>\""}], 
+      "}"}], "]"}], ",", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"$UserBaseDirectory", ",", "\"\<Kernel\>\"", ",", 
+       RowBox[{"\"\<init-backup-\>\"", "<>", 
+        RowBox[{"ToString", "[", "n", "]"}], "<>", "\"\<.m\>\""}]}], "}"}], 
+     "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CopyFile", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"path", ",", "\"\<init\>\"", ",", "\"\<init.m\>\""}], "}"}], 
+     "]"}], ",", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$UserBaseDirectory", ",", "\"\<Kernel\>\"", ",", "\"\<init.m\>\""}], 
+      "}"}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.705291707007222*^9, 3.7052917218111115`*^9}, {
+   3.705291752873533*^9, 3.7052917810879045`*^9}, {3.705291853322981*^9, 
+   3.7052918879324875`*^9}, {3.7052919437863092`*^9, 
+   3.7052919470900507`*^9}, {3.7052920707105885`*^9, 
+   3.7052920821479607`*^9}, {3.7052921177147183`*^9, 
+   3.7052921220899096`*^9}, {3.7052921734416275`*^9, 3.70529219919588*^9}, {
+   3.705292252204164*^9, 3.705292278515083*^9}, {3.705292317082222*^9, 
+   3.7052923620439253`*^9}, {3.705292392420596*^9, 3.7052925089551516`*^9}, {
+   3.705292553434185*^9, 3.7052925607978044`*^9}, {3.7052926025470686`*^9, 
+   3.705292606017758*^9}, {3.705309908829167*^9, 3.7053099760234256`*^9}, {
+   3.7053100071153555`*^9, 3.7053100633178916`*^9}, {3.7053101046594687`*^9, 
+   3.7053101624857063`*^9}, {3.7053102015358067`*^9, 3.7053102054544783`*^9}, 
+   3.7053102505544357`*^9, 3.7053104353907475`*^9, {3.7053107813525443`*^9, 
+   3.705310822171151*^9}, {3.705815673188029*^9, 3.7058156745160007`*^9}, {
+   3.707090010642833*^9, 3.7070900926546483`*^9}, {3.7071008070434723`*^9, 
+   3.7071008272521143`*^9}, 3.707103689501848*^9, {3.708660096160587*^9, 
+   3.70866011603876*^9}, {3.70866015796572*^9, 3.70866022433595*^9}, {
+   3.7086603831566205`*^9, 3.708660394661047*^9}, {3.708660889517804*^9, 
+   3.7086608896770687`*^9}, {3.708661114333213*^9, 
+   3.7086611150897727`*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
+16f19f3b038a"]
+},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e745\:670816\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4496, 106, 229, "Input", "ExpressionUUID" -> \
+"192e6d11-18d3-412e-8880-16f19f3b038a"]
+}
+]
+*)
+
