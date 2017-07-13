@@ -38,7 +38,7 @@ GiniCoefficient[data_]:=If[ListQ[data],
  0
 ]
 
-ROC[da_List,OptionsPattern[{"GreaterEqualQ"->True}]]:=Module[{
+ROC[da_List,OptionsPattern[{"GreaterEqualQ"->True,"Title"->"\:526f\:6807\:9898"}]]:=Module[{
 sda=Sort[da[[;;,1]],Greater],
 splitPoints,
 negativeSample=Sort[Select[da,#[[2]]==0&][[;;,1]]],
@@ -69,7 +69,7 @@ ROCCurve=Graphics[{
 Frame->True,
 FrameTicks->{{True,False},{True,False}},
 FrameLabel->{Style["False Positive Rate",14,FontFamily->"Times New Roman"],Style["True Positive Rate",14,FontFamily->"Times New Roman"]},
-PlotLabel->Column[{Style["ROC\:66f2\:7ebf",18,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"],Style["\:526f\:6807\:9898",14,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"]},Alignment->Center],
+PlotLabel->Column[{Style["ROC\:66f2\:7ebf",18,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"],Style[OptionValue["Title"],14,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"]},Alignment->Center],
 Epilog->{
 {White,EdgeForm[Black],Rectangle[{0.78,0.49},{1.01,0.55},RoundingRadius->0.01]},
 {Darker[Green,0.3],AbsoluteThickness[2],Line[{{0.8,0.52},{0.9,0.52}}]},
