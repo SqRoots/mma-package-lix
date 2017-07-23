@@ -111,7 +111,7 @@ ROCGroupCompare[da1_,da2_]:=Block[{
 rocData1=ROCData[da1],
 rocData2=ROCData[da2]
 },
-Return[1-CDF[Abs[rocData1["AUC"]-rocData2["AUC"]]/Sqrt[rocData1["SEA"]^2+rocData1["SEA"]^2]]]
+Return[1-CDF[NormalDistribution[],Abs[rocData1["AUC"]-rocData2["AUC"]]/Sqrt[rocData1["SEA"]^2+rocData1["SEA"]^2]]]
 ];
 (*\:914d\:5bf9\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:76f8\:540c\:6837\:672c*)
 ROCPairCompare[da1_,da2_]:=Block[{
