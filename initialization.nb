@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5376,        143]
-NotebookOptionsPosition[      5058,        128]
-NotebookOutlinePosition[      5415,        144]
-CellTagsIndexPosition[      5372,        141]
+NotebookDataLength[      5687,        151]
+NotebookOptionsPosition[      5369,        136]
+NotebookOutlinePosition[      5726,        152]
+CellTagsIndexPosition[      5683,        149]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,12 +50,19 @@ Cell[BoxData[{
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"initnbFiles", "=", 
-   RowBox[{"FileNames", "[", 
-    RowBox[{"\"\<init.nb\>\"", ",", 
-     RowBox[{"FileNameJoin", "[", 
-      RowBox[{"{", 
-       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
-     "Infinity"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FileNames", "[", 
+     RowBox[{"\"\<init.nb\>\"", ",", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
+      "Infinity"}], "]"}], "~", "Join", "~", 
+    RowBox[{"FileNames", "[", 
+     RowBox[{"\"\<init.nb\>\"", ",", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"path", ",", "\"\<init\>\""}], "}"}], "]"}], ",", 
+      "Infinity"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"NotebookEvaluate", "/@", "initnbFiles"}], ";"}], 
@@ -122,13 +129,14 @@ Cell[BoxData[{
    3.7071008272521143`*^9}, 3.707103689501848*^9, {3.708660096160587*^9, 
    3.70866011603876*^9}, {3.70866015796572*^9, 3.70866022433595*^9}, {
    3.7086603831566205`*^9, 3.708660394661047*^9}, {3.708660889517804*^9, 
-   3.7086608896770687`*^9}, {3.708661114333213*^9, 
-   3.7086611150897727`*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
+   3.7086608896770687`*^9}, {3.708661114333213*^9, 3.7086611150897727`*^9}, {
+   3.7097867828530293`*^9, 
+   3.709786790438423*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
 16f19f3b038a"]
 },
 WindowSize->{1536, 781},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e745\:670816\
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e744\:670818\
 \:65e5)",
 StyleDefinitions->"Default.nb"
 ]
@@ -143,7 +151,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4496, 106, 229, "Input", "ExpressionUUID" -> \
+Cell[558, 20, 4807, 114, 221, "Input", "ExpressionUUID" -> \
 "192e6d11-18d3-412e-8880-16f19f3b038a"]
 }
 ]

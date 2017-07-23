@@ -6,7 +6,7 @@ RunsTest::usage = "RunsTest[da,\[Alpha]] \:5728\:663e\:8457\:6c34\:5e73\[Alpha]\
 GiniCoefficient::usage = "\:57fa\:5c3c\:7cfb\:6570\:3002
 	\:8f93\:5165\:5217\:8868\:6216\:6570\:5b57\:ff0c\:6bcf\:4e2a\:5143\:7d20\:5fc5\:9700\:662f\:6570\:5b57\:ff0c\:591a\:7ef4\:5217\:8868\:4f1a\:88ab\:538b\:5e73\:ff0c\:6570\:5b57\:8fd4\:56de0\:3002
 	\:53c2\:6570\:ff1ahttps://en.wikipedia.org/wiki/Gini_coefficient"
-ROC::usage = "ROC[data,\"GreaterEqualQ\"\[Rule]True,\"ConfidenceLevel\"->0.95,\"SubTitle\"->\"\:526f\:6807\:9898\"]\:ff0c
+ROC::usage = "ROC[data,\"GreaterEqualQ\"\[Rule]True,\"ConfidenceLevel\"->0.975,\"SubTitle\"->\"\:526f\:6807\:9898\"]\:ff0c
 \:5206\:5e03\:5047\:5b9a\:ff1a\:975e\:53c2\:6570
 \:53c2\:6570\:ff1a
 	\:5305\:542b\:80af\:5b9a\:5206\:7c7b\:7684\:5206\:754c\:503c\:ff1a\"GreaterEqualQ\"\:ff0c\:9ed8\:8ba4\:4e3a\:771f\:ff1b
@@ -45,7 +45,7 @@ GiniCoefficient[data_]:=If[ListQ[data],
 ]
 
 (*============= ROC =============*)
-ROC[da_List,OptionsPattern[{"GreaterEqualQ"->True,"ConfidenceLevel"->0.95,"SubTitle"->"\:526f\:6807\:9898"}]]:=Block[{
+ROC[da_List,OptionsPattern[{"GreaterEqualQ"->True,"ConfidenceLevel"->0.975,"SubTitle"->"\:526f\:6807\:9898"}]]:=Block[{
 sda=Sort[da[[;;,1]],Greater],
 splitPoints,
 negativeSample=Sort[Select[da,#[[2]]==0&][[;;,1]]],
