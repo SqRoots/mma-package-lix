@@ -18,17 +18,13 @@
 ## 目录说明
 ```
 ├─init（初始化文件）
-├─package-lix-dist（包--init.m中指定要加载的包--不上传）
-│  ├─lixDA
-│  ├─lixDB
-│  │  └─drivers
-│  └─lixWeb
-└─package-lix-src（包--源文件，用于开发）
-    ├─lixDA
-    ├─lixDB
-    │  ├─drivers
-    │  └─lixDB-config.txt(数据库配置文件--不上传)
-    └─lixWeb
+├─package （包--init.m中指定要加载的包--不上传）
+│  ├─lixDA （数据分析包）
+│  └─lixWeb （网络相关包）
+├─initialization.nb （初始化程序）
+├─README.md （说明）
+└─recovery.nb （恢复程序）
+
 ```
 
 ## 功能列表

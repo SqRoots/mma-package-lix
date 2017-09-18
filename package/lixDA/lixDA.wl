@@ -149,6 +149,8 @@ Return[1-CDF[NormalDistribution[],Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SE
 
 (*============= \:5217\:8054\:8868\:68c0\:9a8c =============*)
 (*\:8f93\:5165\:4e8c\:7ef4\:5217\:8054\:8868\:ff0c\:8fd4\:56de\:5361\:65b9\:503c\:4e0e\:5bf9\:5e94\:7684p\:503c*)
+(*\:53c2\:8003\:ff1aISBN 9787040238969 \:300a\:6982\:7387\:8bba\:4e0e\:6570\:7406\:7edf\:8ba1\:300b \:76db\:9aa4 \:7b2c\:56db\:7248 P199~205*)
+(*\:53c2\:8003\:ff1aISBN 9787040233933 \:300a\:7edf\:8ba1\:5b66\:ff1a\:4ece\:6982\:5ff5\:5230\:6570\:636e\:5206\:6790\:300b \:5434\:559c\:4e4b P130~133*)
 ContingencyTableTest[table_]:=If[Depth[table]==3&&Length[Dimensions[table]]==2&&Min[Dimensions[table]]>1,
 Block[{ChiSquareValue,ChiSquareP,t=N[table],dof,sampleNum,colTotal,rowTotal,f,np,v},
 (*\:8ba1\:7b97\:5361\:65b9\:503c\:ff0c\:8f93\:5165\:ff1a\:5b9e\:9645\:9891\:6570\:ff0c\:4f30\:8ba1\:9891\:6570\:ff0c\:6837\:672c\:91cf*)
