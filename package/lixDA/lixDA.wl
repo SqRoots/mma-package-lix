@@ -39,11 +39,17 @@ ROCPairCompare::usage="\:6709\:95ee\:9898\:ff01\:914d\:5bf9\:6bd4\:8f83\:663e\:8
 ROCPairCompare[data1,data2]
 \:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:6700\:540e1\:5217\:4e3a\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:9633\:ff0c0\:8868\:9634"
 
+ContingencyTableTest::usage="\:8f93\:5165\:4e8c\:7ef4\:5217\:8054\:8868\:ff0c\:8fd4\:56de\:5361\:65b9\:503c\:4e0e\:5bf9\:5e94\:7684p\:503c\:3002
+\:4f8b\:5982\:ff1a
+ContingencyTableTest[{{61,16,35},{262,43,176},{160,48,189}}]"
+ContingencyTableTest::error="\:8bf7\:8f93\:5165\:4e8c\:7ef4\:5217\:8054\:8868\:ff0c\:4e14\:884c\:6570\:548c\:5217\:6570\:5747\:4e0d\:5c0f\:4e8e2\:ff01"
+ContingencyTableTest::SampleLess="\:6837\:672c\:91cf\:5c0f\:4e8e50\:ff0c\:4e0d\:6ee1\:8db3\:6700\:4f4e\:8981\:6c42\:ff0c\:7ed3\:679c\:53ef\:80fd\:4e0d\:51c6\:786e\:ff0c\:8bf7\:589e\:52a0\:6837\:672c\:91cf\:ff01"
+ContingencyTableTest::np="\:67d0\:5355\:5143\:683c\:5185\:4f30\:8ba1\:9891\:6570\:5c0f\:4e8e5\:ff0c\:7ed3\:679c\:53ef\:80fd\:4e0d\:51c6\:786e\:ff0c\:8bf7\:5408\:5e76\:884c\:6216\:5217\:ff01"
 
 
 Begin["`Private`"]
 (*============= RunsTest =============*)
-RunsTest=Function[{da,\[Alpha]},
+RunsTest[da_,\[Alpha]_]:=Block[{n1,n2,r,rb,s2r,z},
 n1=Count[da,1];
 n2=Count[da,0];
 r=Total[Abs[Differences[da]]]+1;
@@ -51,7 +57,9 @@ rb=(2 n1 n2)/(n1+n2)+1;
 s2r=(2 n1 n2 (2 n1 n2-n1-n2))/((n1+n2)^2 (n1+n2-1));
 z=(r-rb)/Sqrt[s2r];
 If[n1>10 && n2>10,
-{If[Abs[z]>InverseCDF[NormalDistribution[0,1],1-\[Alpha]/2],Style["\:5e8f\:5217\:4e0d\:968f\:673a",Red],Style["\:5e8f\:5217\:968f\:673a",Blue]],"\:ff08\:6570\:636e\:91cf,\:6e38\:7a0b\:6570\:ff09\:ff1a"<>"\:ff08"<>ToString[Length[da]]<>","<>ToString[r]<>"\:ff09","\:7edf\:8ba1\:91cf\:ff1a"<>ToString[N[z]],"\:6982\:7387\:ff1a"<>ToString[CDF[NormalDistribution[0,1],z]//N]},
+{If[Abs[z]>InverseCDF[NormalDistribution[0,1],1-\[Alpha]/2],Style["\:5e8f\:5217\:4e0d\:968f\:673a",Red],Style["\:5e8f\:5217\:968f\:673a",Blue]],
+"\:ff08\:6570\:636e\:91cf,\:6e38\:7a0b\:6570\:ff09\:ff1a"<>"\:ff08"<>ToString[Length[da]]<>","<>ToString[r]<>"\:ff09",
+"\:7edf\:8ba1\:91cf\:ff1a"<>ToString[N[z]],"\:6982\:7387\:ff1a"<>ToString[CDF[NormalDistribution[0,1],z]//N]},
 Style["n1\:6216n2\:5c0f\:4e8e10\:ff0c\:4e0d\:6ee1\:8db3\:6e38\:7a0b\:6a21\:578b\:ff01",Red,Bold]]
 ];
 
@@ -138,6 +146,28 @@ Print[Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SEA"]^2-2covA1A2]];
 Return[1-CDF[NormalDistribution[],Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SEA"]^2-2covA1A2]]]
 ];
 
+
+(*============= \:5217\:8054\:8868\:68c0\:9a8c =============*)
+(*\:8f93\:5165\:4e8c\:7ef4\:5217\:8054\:8868\:ff0c\:8fd4\:56de\:5361\:65b9\:503c\:4e0e\:5bf9\:5e94\:7684p\:503c*)
+ContingencyTableTest[table_]:=If[Depth[table]==3&&Length[Dimensions[table]]==2&&Min[Dimensions[table]]>1,
+Block[{ChiSquareValue,ChiSquareP,t=N[table],dof,sampleNum,colTotal,rowTotal,f,np,v},
+(*\:8ba1\:7b97\:5361\:65b9\:503c\:ff0c\:8f93\:5165\:ff1a\:5b9e\:9645\:9891\:6570\:ff0c\:4f30\:8ba1\:9891\:6570\:ff0c\:6837\:672c\:91cf*)
+ChiSquareValue[f_,np_,n_]:=((f^2).(1/np))-n;
+(*\:8ba1\:7b97\:5361\:65b9\:503c\:5bf9\:5e94\:7684p\:503c\:ff0c\:8f93\:5165\:ff1a\:5361\:65b9\:503c\:ff0c\:81ea\:7531\:5ea6*)
+ChiSquareP[v_,dof_]:=1-CDF[ChiSquareDistribution[dof],v];
+dof=Times@@(Dimensions[t]-1);(*\:81ea\:7531\:5ea6*)
+sampleNum=Total[t,2];(*\:6837\:672c\:91cf*)
+If[sampleNum<50,Message[ContingencyTableTest::SampleLess]];
+colTotal=Total[t,{1}];(*\:5217\:548c*)
+rowTotal=Total[t,{2}];(*\:884c\:548c*)
+np=Flatten[Outer[Times,rowTotal,colTotal,1]]/sampleNum;(*\:4f30\:8ba1\:7684\:9891\:6570*)
+If[Min[np]<5,Message[ContingencyTableTest::np]];
+f=Flatten[t];(*\:5b9e\:9645\:9891\:6570*)
+v=ChiSquareValue[f,np,sampleNum];(*\:5361\:65b9\:503c*)
+Return[<|"value"->v,"p-value"->ChiSquareP[v,dof]|>](*\:8fd4\:56de\:5361\:65b9\:503c\:4e0e\:5bf9\:5e94\:7684p\:503c*)
+],
+Message[ContingencyTableTest::error];
+];
 End[]
 
 EndPackage[]

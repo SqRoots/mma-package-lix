@@ -10,59 +10,39 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5687,        151]
-NotebookOptionsPosition[      5369,        136]
-NotebookOutlinePosition[      5726,        152]
-CellTagsIndexPosition[      5683,        149]
+NotebookDataLength[      5054,        130]
+NotebookOptionsPosition[      4751,        117]
+NotebookOutlinePosition[      5101,        132]
+CellTagsIndexPosition[      5058,        129]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"path", "=", 
-   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Quiet", "[", 
-   RowBox[{"DeleteDirectory", "[", 
-    RowBox[{
-     RowBox[{"FileNameJoin", "[", 
-      RowBox[{"{", 
-       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
-     RowBox[{"DeleteContents", "\[Rule]", "True"}]}], "]"}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{
-   RowBox[{"CopyDirectory", "[", 
-    RowBox[{
-     RowBox[{"FileNameJoin", "[", 
-      RowBox[{"{", 
-       RowBox[{"path", ",", "\"\<package-lix-src\>\""}], "}"}], "]"}], ",", 
-     RowBox[{"FileNameJoin", "[", 
-      RowBox[{"{", 
-       RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}]}], 
-    "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"path", "=", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
-    RowBox[{"\:901a\:8fc7\:5305\:4e2d\:7684", " ", 
+    RowBox[{"\:901a\:8fc7\:6bcf\:4e2a\:7a0b\:5e8f\:5305\:4e2d\:7684", " ", 
      RowBox[{"init", ".", "nb"}], " ", "\:7a0b\:5e8f"}], "\:ff0c", 
     "\:5904\:7406\:9700\:8981\:521d\:59cb\:5316\:7684\:5305"}], 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"initnbFiles", "=", 
-   RowBox[{
-    RowBox[{"FileNames", "[", 
-     RowBox[{"\"\<init.nb\>\"", ",", 
-      RowBox[{"FileNameJoin", "[", 
-       RowBox[{"{", 
-        RowBox[{"path", ",", "\"\<package-lix-dist\>\""}], "}"}], "]"}], ",", 
-      "Infinity"}], "]"}], "~", "Join", "~", 
-    RowBox[{"FileNames", "[", 
-     RowBox[{"\"\<init.nb\>\"", ",", 
-      RowBox[{"FileNameJoin", "[", 
-       RowBox[{"{", 
-        RowBox[{"path", ",", "\"\<init\>\""}], "}"}], "]"}], ",", 
-      "Infinity"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"\"\<init.nb\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{"path", ",", "\"\<package\>\""}], "}"}], "]"}], ",", 
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{"path", ",", "\"\<init\>\""}], "}"}], "]"}]}], "}"}], ",", 
+     "Infinity"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"NotebookEvaluate", "/@", "initnbFiles"}], ";"}], 
@@ -130,14 +110,14 @@ Cell[BoxData[{
    3.70866011603876*^9}, {3.70866015796572*^9, 3.70866022433595*^9}, {
    3.7086603831566205`*^9, 3.708660394661047*^9}, {3.708660889517804*^9, 
    3.7086608896770687`*^9}, {3.708661114333213*^9, 3.7086611150897727`*^9}, {
-   3.7097867828530293`*^9, 
-   3.709786790438423*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
+   3.7097867828530293`*^9, 3.709786790438423*^9}, {3.7147373376750593`*^9, 
+   3.714737382569953*^9}, {3.7147374880019627`*^9, 
+   3.7147375103161554`*^9}},ExpressionUUID->"192e6d11-18d3-412e-8880-\
 16f19f3b038a"]
 },
 WindowSize->{1536, 781},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e744\:670818\
-\:65e5)",
+WindowMargins->{{Automatic, -5}, {-166, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -151,8 +131,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4807, 114, 221, "Input", "ExpressionUUID" -> \
-"192e6d11-18d3-412e-8880-16f19f3b038a"]
+Cell[558, 20, 4189, 95, 200, "Input",ExpressionUUID->"192e6d11-18d3-412e-8880-16f19f3b038a"]
 }
 ]
 *)
