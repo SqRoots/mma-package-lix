@@ -170,6 +170,13 @@ Return[<|"value"->v,"p-value"->ChiSquareP[v,dof]|>](*\:8fd4\:56de\:5361\:65b9\:5
 ],
 Message[ContingencyTableTest::error];
 ];
-End[]
 
+(*============= (0-1)\:5206\:5e03\:53c2\:6570\:7684\:533a\:95f4\:4f30\:8ba1 =============*)
+(*\:8f93\:5165\:ff1a\:6837\:672c\:91cf\:ff0c1\:7684\:6570\:91cf\:ff0c\:7f6e\:4fe1\:6c34\:5e731-\[Alpha]*)
+(*\:8f93\:51fa\:ff1a1\:51fa\:73b0\:6982\:7387p\:7684\:7f6e\:4fe1\:533a\:95f4*)
+(*\:53c2\:8003\:ff1aISBN 9787040238969 \:300a\:6982\:7387\:8bba\:4e0e\:6570\:7406\:7edf\:8ba1\:300b \:76db\:9aa4 \:7b2c\:56db\:7248 P199~205*)
+(*FindDistributionParameters[RandomInteger[1,{100}],BernoulliDistribution[p]]*)
+(*MeanCI[ConstantArray[1,9608]~Join~ConstantArray[0,446],ConfidenceLevel->.975]*)
+
+End[]
 EndPackage[]
