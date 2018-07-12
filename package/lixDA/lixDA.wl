@@ -74,8 +74,13 @@ GiniCoefficient[data_]:=If[ListQ[data],
 ]
 
 (*============= ROC =============*)
+(*\:53c2\:8003\:ff1a\:300a\:533b\:5b66\:7edf\:8ba1\:5b66\:300b\:7b2c3\:7248\:ff0c\:4e3b\:7f16\:ff1a\:989c\:8679\:ff0c\:5f90\:52c7\:52c7\:ff0cISBN\:ff1a9787117205047\:ff0cPage\:ff1a203*)
+(*\:65b9\:6cd5\:ff1aHanley-McNeil \:975e\:53c2\:6570\:4f30\:8ba1\:6cd5*)
+(*-----------------------------*)
+(*\:9634\:9633\:6982\:7387\:8f6c\:ff1a0\:ff0c1*)
 ROCS[yp_,yn_]:=(Sign[yp-yn]+1.0)/2;
-(*ROC\:57fa\:672c\:6570\:636e*)
+(*\:8ba1\:7b97ROC\:57fa\:672c\:6570\:636e*)
+(*\:8f93\:5165\:ff1a\:77e9\:9635\:ff0c\:6bcf\:884c2\:5217\:ff1a\:6a21\:578b\:4f30\:8ba1\:7684\:9633\:6027\:6982\:7387\:ff08\:503c\:57df\:4e0d\:5c40\:9650\:4e8e0~1\:ff09\:ff0c\:5b9e\:9645\:662f\:5426\:4e3a\:9633\:6027\:ff080\:9634\:ff0c1\:9633\:ff09*)
 ROCData[da_,OptionsPattern[{"ConfidenceLevel"->0.975}]]:=Block[{
 sDa=Reverse[Union[da[[;;,1]]]],
 positiveSample=Sort[Select[da,#[[-1]]==1&][[;;,1]]],
@@ -110,18 +115,24 @@ Return[<|
 "p0.5"->1-CDF[NormalDistribution[],(a-0.5)/SEA]
 |>]
 ];
+
 (*ROC\:66f2\:7ebf*)
+(*\:8f93\:5165\:ff1a\:51fd\:6570ROCData\:8fd4\:56de\:7684\:7ed3\:679c*)
 ROCCurve[da_,OptionsPattern[{"SubTitle"->"\:526f\:6807\:9898"}]]:=Block[{rocPoints=da["ROCPoints"]},
 Graphics[{{Darker[Green,0.3],AbsoluteThickness[1.7],Line[rocPoints]},{Darker[Green,0.6],AbsolutePointSize[5],Point[rocPoints]},{Dashing[{0.02,0.04-0.02}],GrayLevel[0.5],Line[{{0,0},{1,1}}]}},Frame->True,FrameTicks->{{True,False},{True,False}},FrameLabel->{Style["False Positive Rate",14,FontFamily->"Times New Roman"],Style["True Positive Rate",14,FontFamily->"Times New Roman"]},PlotLabel->Column[{Style["ROC\:66f2\:7ebf",18,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"],Style[OptionValue["SubTitle"],14,Bold,FontFamily->"\:5fae\:8f6f\:96c5\:9ed1"]},Alignment->Center],Epilog->{{White,EdgeForm[Black],Rectangle[{0.78,0.49},{1.01,0.55},RoundingRadius->0.01]},{Darker[Green,0.3],AbsoluteThickness[2],Line[{{0.8,0.52},{0.9,0.52}}]},{Darker[Green,0.6],AbsolutePointSize[5],Point[{0.85,0.52}]},Inset[Style["ANN"],{0.96,0.52}]},ImageSize->500,ImageMargins->10,Background->White]
 ];
+
 (*\:6210\:7ec4\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:4e0d\:540c\:6837\:672c*)
+(*\:8f93\:5165\:ff1a2\:4e2a\:77e9\:9635\:ff0c\:6bcf\:4e2a\:77e9\:9635\:7684\:6bcf\:884c\:67092\:5217\:ff0c\:5206\:522b\:662f\:ff1a\:6a21\:578b\:4f30\:8ba1\:7684\:9633\:6027\:6982\:7387\:ff08\:503c\:57df\:4e0d\:5c40\:9650\:4e8e0~1\:ff09\:ff0c\:5b9e\:9645\:662f\:5426\:4e3a\:9633\:6027\:ff080\:9634\:ff0c1\:9633\:ff09*)
 ROCGroupCompare[da1_,da2_]:=Block[{
 rocData1=ROCData[da1],
 rocData2=ROCData[da2]
 },
 Return[1-CDF[NormalDistribution[],Abs[rocData1["AUC"]-rocData2["AUC"]]/Sqrt[rocData1["SEA"]^2+rocData1["SEA"]^2]]]
 ];
+
 (*\:914d\:5bf9\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:76f8\:540c\:6837\:672c*)
+(*\:8f93\:5165\:ff1a2\:4e2a\:77e9\:9635\:ff0c\:6bcf\:4e2a\:77e9\:9635\:7684\:6bcf\:884c\:67092\:5217\:ff0c\:5206\:522b\:662f\:ff1a\:6a21\:578b\:4f30\:8ba1\:7684\:9633\:6027\:6982\:7387\:ff08\:503c\:57df\:4e0d\:5c40\:9650\:4e8e0~1\:ff09\:ff0c\:5b9e\:9645\:662f\:5426\:4e3a\:9633\:6027\:ff080\:9634\:ff0c1\:9633\:ff09*)
 ROCPairCompare[da1_,da2_]:=Block[{
 rocData1=ROCData[da1],
 rocData2=ROCData[da2],
@@ -131,19 +142,18 @@ a1,a2,
 STP,STN,
 covA1A2
 },
-nPositive=rocData1["nPositive"];
-nNegative=rocData1["nNegative"];
+nPositive=rocData1["nPositive"];(*\:7531\:4e8e\:662f\:914d\:5bf9\:6bd4\:8f83\:ff0c\:4e24\:79cd\:65b9\:6cd5\:6765\:81ea\:540c\:4e00\:6837\:672c\:ff0c\:6240\:4ee5\:6b63\:6837\:672c\:6570\:91cf\:76f8\:540c*)
+nNegative=rocData1["nNegative"];(*\:7531\:4e8e\:662f\:914d\:5bf9\:6bd4\:8f83\:ff0c\:4e24\:79cd\:65b9\:6cd5\:6765\:81ea\:540c\:4e00\:6837\:672c\:ff0c\:6240\:4ee5\:8d1f\:6837\:672c\:6570\:91cf\:76f8\:540c*)
 positiveSample1=rocData1["positiveSample"];
 negativeSample1=rocData1["negativeSample"];
 positiveSample2=rocData2["positiveSample"];
 negativeSample2=rocData2["negativeSample"];
 a1=rocData1["AUC"];
 a2=rocData2["AUC"];
-STP=Sum[(ROCS[positiveSample1[[i]],negativeSample1[[j]]]/nNegative-a1)(ROCS[positiveSample2[[i]],negativeSample2[[j]]]/nNegative-a2),{i,nPositive},{j,nNegative}]/(nPositive-1);
-STN=Sum[(ROCS[positiveSample1[[j]],negativeSample1[[i]]]/nPositive-a1)(ROCS[positiveSample2[[j]],negativeSample2[[i]]]/nPositive-a2),{i,nNegative},{j,nPositive}]/(nNegative-1);
+STP=Sum[(Sum[ROCS[positiveSample1[[i]],negativeSample1[[j]]],{j,nNegative}]/nNegative-a1)(Sum[ROCS[positiveSample2[[i]],negativeSample2[[j]]],{j,nNegative}]/nNegative-a2),{i,nPositive}]/(nPositive-1);
+STN=Sum[(Sum[ROCS[positiveSample1[[j]],negativeSample1[[i]]],{j,nPositive}]/nPositive-a1)(Sum[ROCS[positiveSample2[[j]],negativeSample2[[i]]],{j,nPositive}]/nPositive-a2),{i,nNegative}]/(nNegative-1);
 covA1A2=STP/nPositive+STN/nNegative;
-Print[Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SEA"]^2-2covA1A2]];
-Return[1-CDF[NormalDistribution[],Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SEA"]^2-2covA1A2]]]
+Return[1.0-CDF[NormalDistribution[],Abs[a1-a2]/Sqrt[rocData1["SEA"]^2+rocData2["SEA"]^2-2covA1A2]]]
 ];
 
 
