@@ -12,7 +12,7 @@ ROCS::usage=""
 
 ROCData::usage="ROC\:57fa\:672c\:6570\:636e
 ROCData[data,,\"ConfidenceLevel\"->0.975]
-\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027
+\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff08\:6216\:6307\:6807\:ff09\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027
 \:53c2\:8003\:6587\:732e\:300a\:533b\:5b66\:7edf\:8ba1\:5b66-[\:7b2c2\:7248]-[8\:5e74\:5236\:7528\:4e66]-[\:989c\:8679\:4e3b\:7f16]\:300b
 \:5206\:5e03\:5047\:5b9a\:ff1a\:975e\:53c2\:6570
 \:53c2\:6570\:ff1a
@@ -29,15 +29,15 @@ ROCData[data,,\"ConfidenceLevel\"->0.975]
 
 ROCCurve::usage="ROC\:66f2\:7ebf
 ROCCurve[data,OptionsPattern[{\"SubTitle\"\[Rule]\"\:526f\:6807\:9898\"}]]
-\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
+\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff08\:6216\:6307\:6807\:ff09\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
 
 ROCGroupCompare::usage="\:6210\:7ec4\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:4e0d\:540c\:6837\:672c
 ROCGroupCompare[data1,data2]
-\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
+\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff08\:6216\:6307\:6807\:ff09\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
 
 ROCPairCompare::usage="\:6709\:95ee\:9898\:ff01\:914d\:5bf9\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:76f8\:540c\:6837\:672c
 ROCPairCompare[data1,data2]
-\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
+\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff08\:6216\:6307\:6807\:ff09\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
 
 ContingencyTableTest::usage="\:8f93\:5165\:4e8c\:7ef4\:5217\:8054\:8868\:ff0c\:8fd4\:56de\:5361\:65b9\:503c\:4e0e\:5bf9\:5e94\:7684p\:503c\:3002
 \:4f8b\:5982\:ff1a
@@ -74,7 +74,7 @@ GiniCoefficient[data_]:=If[ListQ[data],
 ]
 
 (*============= ROC =============*)
-(*\:53c2\:8003\:ff1a\:300a\:533b\:5b66\:7edf\:8ba1\:5b66\:300b\:7b2c3\:7248\:ff0c\:4e3b\:7f16\:ff1a\:989c\:8679\:ff0c\:5f90\:52c7\:52c7\:ff0cISBN\:ff1a9787117205047\:ff0cPage\:ff1a203*)
+(*\:53c2\:8003\:ff1a\:300a\:533b\:5b66\:7edf\:8ba1\:5b66\:300b\:7b2c3\:7248\:ff0c\:4e3b\:7f16\:ff1a\:989c\:8679\:ff0c\:5f90\:52c7\:52c7\:ff0cISBN\:ff1a9787117205047\:ff0cPage\:ff1a230*)
 (*\:65b9\:6cd5\:ff1aHanley-McNeil \:975e\:53c2\:6570\:4f30\:8ba1\:6cd5*)
 (*-----------------------------*)
 (*\:9634\:9633\:6982\:7387\:8f6c\:ff1a0\:ff0c1*)
@@ -133,21 +133,24 @@ Return[1-CDF[NormalDistribution[],Abs[rocData1["AUC"]-rocData2["AUC"]]/Sqrt[rocD
 
 (*\:914d\:5bf9\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:76f8\:540c\:6837\:672c*)
 (*\:8f93\:5165\:ff1a2\:4e2a\:77e9\:9635\:ff0c\:6bcf\:4e2a\:77e9\:9635\:7684\:6bcf\:884c\:67092\:5217\:ff0c\:5206\:522b\:662f\:ff1a\:6a21\:578b\:4f30\:8ba1\:7684\:9633\:6027\:6982\:7387\:ff08\:503c\:57df\:4e0d\:5c40\:9650\:4e8e0~1\:ff09\:ff0c\:5b9e\:9645\:662f\:5426\:4e3a\:9633\:6027\:ff080\:9634\:ff0c1\:9633\:ff09*)
-ROCPairCompare[da1_,da2_]:=Block[{
-rocData1=ROCData[da1],
-rocData2=ROCData[da2],
+ROCPairCompare[da_]:=Block[{
+rocData1=ROCData[da[[;;,{1,-1}]]],
+rocData2=ROCData[da[[;;,{2,-1}]]],
 nPositive,nNegative,
-positiveSample1,negativeSample1,positiveSample2,negativeSample2,
+positiveSample,positiveSample1,positiveSample2,negativeSample,negativeSample1,negativeSample2,
 a1,a2,
 STP,STN,
 covA1A2
 },
 nPositive=rocData1["nPositive"];(*\:7531\:4e8e\:662f\:914d\:5bf9\:6bd4\:8f83\:ff0c\:4e24\:79cd\:65b9\:6cd5\:6765\:81ea\:540c\:4e00\:6837\:672c\:ff0c\:6240\:4ee5\:6b63\:6837\:672c\:6570\:91cf\:76f8\:540c*)
 nNegative=rocData1["nNegative"];(*\:7531\:4e8e\:662f\:914d\:5bf9\:6bd4\:8f83\:ff0c\:4e24\:79cd\:65b9\:6cd5\:6765\:81ea\:540c\:4e00\:6837\:672c\:ff0c\:6240\:4ee5\:8d1f\:6837\:672c\:6570\:91cf\:76f8\:540c*)
-positiveSample1=rocData1["positiveSample"];
-negativeSample1=rocData1["negativeSample"];
-positiveSample2=rocData2["positiveSample"];
-negativeSample2=rocData2["negativeSample"];
+positiveSample=Select[da,#[[-1]]==1&];
+positiveSample1=positiveSample[[;;,1]];
+positiveSample2=positiveSample[[;;,2]];
+negativeSample=Select[da,#[[-1]]==0&];
+negativeSample1=negativeSample[[;;,1]];
+negativeSample2=negativeSample[[;;,2]];
+
 a1=rocData1["AUC"];
 a2=rocData2["AUC"];
 STP=Sum[(Sum[ROCS[positiveSample1[[i]],negativeSample1[[j]]],{j,nNegative}]/nNegative-a1)(Sum[ROCS[positiveSample2[[i]],negativeSample2[[j]]],{j,nNegative}]/nNegative-a2),{i,nPositive}]/(nPositive-1);
