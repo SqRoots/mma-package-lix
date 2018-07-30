@@ -29,7 +29,7 @@ ROCData[data,,\"ConfidenceLevel\"->0.975]
 
 ROCCurve::usage="ROC\:66f2\:7ebf
 ROCCurve[data,OptionsPattern[{\"SubTitle\"\[Rule]\"\:526f\:6807\:9898\"}]]
-\:5176\:4e2ddata\:ff0c\:4e3an\:884c2\:5217\:6570\:636e\:ff0c\:7b2c1\:5217\:4e3a\:67d0\:79cd\:6a21\:578b\:8ba1\:7b97\:51fa\:7684\:8be5\:6837\:672c\:4e3a\:9633\:6027\:6982\:7387\:ff08\:6216\:6307\:6807\:ff09\:ff0c\:6700\:540e1\:5217\:4e3a\:6837\:672c\:771f\:5b9e\:7684\:9634\:9633\:6807\:5fd7\:ff0c1\:8868\:793a\:9633\:6027\:ff0c0\:8868\:793a\:9634\:6027"
+\:5176\:4e2ddata\:ff0c\:51fd\:6570ROCData\:8fd4\:56de\:7684\:7ed3\:679c"
 
 ROCGroupCompare::usage="\:6210\:7ec4\:6bd4\:8f83\:663e\:8457\:6c34\:5e73\:ff1a\:4e24\:79cd\:8bca\:65ad\:65b9\:5f0f\:4f7f\:7528\:4e0d\:540c\:6837\:672c
 ROCGroupCompare[data1,data2]
